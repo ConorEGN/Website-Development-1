@@ -1,0 +1,124 @@
+body 
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  background-image:
+    linear-gradient(135deg, #ff00cc, #ffee00, #00ffcc, #7a00ff, #ff00cc),
+    url("https://trancentral.tv/wp-content/uploads/2016/06/self-initiation.gif");
+  background-size: 400% 400%, 1000px 1000px;
+  background-blend-mode: overlay;
+  animation: drift 12s linear infinite;
+  padding: 0 70px;
+}
+
+@keyframes drift 
+{
+  0%   { background-position: 0% 50%, 0 0; }
+  100% { background-position: 400% 50%, 0 0; }
+}
+
+div 
+{
+  background-color: rgba(30, 0, 70, 0.75);
+  width: fit-content;
+  border: 10px solid;
+  border-image: conic-gradient(#ff00cc, #ffee00, #00ffcc, #7a00ff, #ff00cc) 1;
+  padding: 10px;
+  margin: 20px;
+  animation: hue 8s linear infinite;
+}
+
+@keyframes hue 
+{
+  to { filter: hue-rotate(360deg); }
+}
+
+h1, h2 
+{
+  letter-spacing: -1px;
+  text-shadow: 3px 3px 0 #ff00cc, -3px -3px 0 #00ffcc;
+}
+
+a { color: #ffee00; }
+a:hover { color: #00ffcc; text-shadow: 0 0 10px #00ffcc; }
+
+.tracked 
+{
+  font-size: 14px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#site-title 
+{
+  text-align: center;
+  font-size: 48px;
+  background: linear-gradient(90deg, #ff00cc, #ffee00, #00ffcc, #ff00cc);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  animation: drift-text 5s linear infinite;
+}
+
+@keyframes drift-text 
+{
+  to { background-position: 300% 0; }
+}
+
+nav a 
+{
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+figure 
+{
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffee00, #ff00cc, #7a00ff);
+  transform: rotate(-2deg);
+  box-shadow: 0 0 30px #ff00cc, 0 0 60px #00ffcc;
+}
+
+figure img { width: 100%; }
+
+figcaption 
+{
+  margin-top: 10px;
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+table 
+{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th 
+{
+  background: linear-gradient(90deg, #ff00cc, #7a00ff);
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+td { padding: 10px; }
+
+tr:nth-of-type(odd)  { background-color: rgba(122, 0, 255, 0.6); }
+tr:nth-of-type(even) { background-color: rgba(0, 0, 0, 0.7); }
+tr:hover             { background-color: #00ffcc; color: #000; }
+
+@media (prefers-reduced-motion: reduce) 
+{
+  body, div, #site-title { animation: none; }
+}
